@@ -1,0 +1,40 @@
+.ContactForm {
+  margin-top: 15px;
+  justify-content: center;
+  display: flex;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  align-items: center;
+}
+.input {
+  margin-top: 15px;
+  display: flex;
+  width: 150px;
+  height: 20px;
+}
+.text {
+  font-size: 25px;
+  line-height: 1.3%;
+}
+.button {
+  background-color: azure;
+  color: black;
+  border: 1px solid rgb(20, 20, 20);
+
+  margin-top: 15px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  width: 100px;
+  height: 30px;
+}
+.button:hover {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: black;
+  color: aliceblue;
+}

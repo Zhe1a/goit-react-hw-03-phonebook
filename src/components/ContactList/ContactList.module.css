@@ -1,0 +1,15 @@
+.Item {
+    margin-top: 10px;
+border: 2px solid green;
+}
+.list{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+display: flex;
+}
+.button{
+    margin-left: 10px;
+    width: 70px;
+    height: 20px;
+}
