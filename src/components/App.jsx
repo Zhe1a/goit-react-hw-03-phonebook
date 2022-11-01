@@ -15,7 +15,6 @@ class App extends Component {
   state = {
     contacts: JSON.parse(localStorage.getItem('contacts')) ?? contacts,
     filter: '',
-    value: '',
   };
   addTodo = options => {
     const { name, number } = options;
@@ -51,7 +50,7 @@ class App extends Component {
   };
   onFilter = e => {
     const { value } = e.target;
-    this.setState(prev => ({ filter: value, value: value }));
+    this.setState(prev => ({ filter: value }));
   };
 
   onfilterContacts = () => {
@@ -64,14 +63,14 @@ class App extends Component {
   };
 
   render() {
-    const { value } = this.state;
+    const { filter } = this.state;
     const { addTodo, onFilter, onfilterContacts, removeContact } = this;
     return (
       <>
         <h1 className={s.titel}>Phonebook</h1>
         <ContactForm addTodo={addTodo} />
         <h2 className={s.titel}>Contacts</h2>
-        <Filter filter={onFilter} value={value} />
+        <Filter filter={onFilter} value={filter} />
         <ContactList contacts={onfilterContacts()} remove={removeContact} />
       </>
     );
